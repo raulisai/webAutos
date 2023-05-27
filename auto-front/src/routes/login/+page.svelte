@@ -1,14 +1,9 @@
 <script>
-
-
 let username="";
 let password="";
 
 
 const logIn = (user,psw)=>{
-console.log("logIn");
-
-
 	//peticion post con envio de JSON
 	fetch('http://localhost:5000/api/signup', {
 	  method: 'POST',
@@ -21,7 +16,7 @@ console.log("logIn");
         password: psw
   })
 })
-.then(res => res.json())
+.then(res => res.json()) 
 .then(data => console.log(data))
 
 }
